@@ -1,0 +1,221 @@
+/* Universal Styles */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue:  hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --storage-bar: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--very-dark-blue);
+    color: var(--pale-blue);
+}
+
+/* ---- Mobile Flow ---- */
+
+html{
+    background: url("../images/bg-mobile.png") no-repeat top;
+    background-size: cover;
+}
+
+/* Container */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 125px 35px;
+}
+
+/* Card One */
+
+.card-one{
+    border-radius: 10px 100px 10px 10px;
+    background-color: var(--dark-blue);
+    width: 326px;
+    height: 201px;
+    padding: 45px 35px 20px 35px;
+    margin-bottom: 25px;
+}
+
+.logo{
+    width: 135.42px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.icons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icon{
+    width: 48.15px;
+    height: 48px;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    border-radius: 7px;
+}
+
+/* Card Two */
+
+.card-two{
+    width: 326px;
+    height: 160px;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.accent{
+    font-weight: 700;
+}
+
+.storage{
+    display: flex;
+    align-items: center;
+    background-color: var(--very-dark-blue);
+    width: 262px;
+    height: 20px;
+    border-radius: 25px;
+    margin: 10px 0;
+}
+
+.storage-line{
+    width: 193px;
+    height: 20px;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 20px;
+}
+
+.dot{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 25px;
+    margin-right: 2px;
+}
+
+.gigabytes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+.remain{
+    background-color: white;
+    width: 179px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--very-dark-blue);
+    font-weight: 700;
+    border-radius: 9px;
+    padding: 20px;
+    position: absolute;
+    bottom: 125px;
+    left: 90px;
+}
+
+
+.remain p{
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.sub{
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    color: var(--grayish-blue);
+    text-transform: uppercase;
+}
+
+/* Desktop Flow */
+
+@media screen and (min-width:1024px) {
+
+    html{
+        background: url("../images/bg-desktop.png") no-repeat bottom;
+        background-size: contain;
+    }
+
+    /* Container */
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 275px 0;
+    }
+
+    /* Card One */
+
+    .card-one{
+        width: 350px;
+        height: 201px;
+        margin-right: 30px;
+    }
+
+    /* Card Two */
+
+    .card-two{
+        height: 175px;
+        width: 540px;
+        font-size: 14px;
+        padding: 60px 35px 25px 35px;
+        text-align: left;
+    }
+
+    .storage{
+        width: 459px;
+        height: 20px;
+        margin-top: 20px;
+    }
+
+    .storage-line{
+        width: 339px;
+        height: 19px;
+    }
+
+    .remain{
+        position: absolute;
+        top: 235px;
+        left: 1000px;
+    }
+
+    .remain::before{
+        content: "";
+	    position: absolute;
+	    border-right: 20px solid white;
+	    border-top: 20px solid white;
+	    border-left: 20px solid transparent;
+	    border-bottom: 20px solid transparent;
+	    bottom: -15px;
+	    right: 0px;
+    }
+    
+}
